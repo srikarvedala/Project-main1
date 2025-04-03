@@ -1,0 +1,28 @@
+##   Need Python 3.9 version only   ##
+#create a virtual env by using this command (first time only(installation))
+python -m venv env
+#activale the virtual env
+env\Scripts\activate
+#install required packages
+pip install db-sqlite3 watchdog yara-python
+
+
+#create db 
+python DBCreate.py 
+
+
+#to run 
+python main.py
+
+
+
+
+####  TO RUN EVERY TIME ####
+
+
+#activate the virtual env
+env\Scripts\activate
+#run the main file
+python main.py
+
+######completed#####

